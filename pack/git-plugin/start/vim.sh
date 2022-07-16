@@ -10,3 +10,4 @@ git clone https://github.com/ryanoasis/vim-devicons
 git clone https://github.com/puremourning/vimspector
 git clone https://github.com/thosakwe/vim-flutter
 git clone https://github.com/carlobaldassi/vim-smartcomment
+git clone https://github.com/Nash0x7E2/awesome-flutter-snippets
