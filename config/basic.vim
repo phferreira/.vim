@@ -1,7 +1,10 @@
+" Enable to copy to clipboard with "+y
+" need install vim-gtk3
+set clipboard=unnamedplus
 " listen line number
 set number relativenumber
 " enable mouse click
-set mouse=r
+"set mouse=r
 set cursorline
 " set UTF-8 encoding
 set enc=utf-8
