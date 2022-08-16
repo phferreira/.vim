@@ -56,4 +56,5 @@ nnoremap <M-Right> :bn<cr>
 nnoremap <M-Left> :bp<cr>
 nmap <Space><Space> i<Space><ESC>
 
-
+"wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/RobotoMono/Medium/complete/Roboto%20Mono%20Medium%20Nerd%20Font%20Complete%20Mono.ttf
+"set guifont=RobotoMono\ Nerd\ Font\ Mono:h16
