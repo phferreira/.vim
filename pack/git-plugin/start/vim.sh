@@ -1,9 +1,9 @@
-git clone https://github.com/vim-airline/vim-airline                                                                                                                                      
 git clone https://github.com/vim-airline/vim-airline-themes
 git clone https://github.com/tomasiser/vim-code-dark
 git clone https://github.com/neoclide/coc.nvim
 git clone https://github.com/dart-lang/dart-vim-plugin
 git clone https://github.com/junegunn/fzf
+git clone https://github.com/junegunn/fzf.vim
 git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/preservim/nerdtree
 git clone https://github.com/ryanoasis/vim-devicons
@@ -11,4 +11,5 @@ git clone https://github.com/puremourning/vimspector
 git clone https://github.com/thosakwe/vim-flutter
 git clone https://github.com/carlobaldassi/vim-smartcomment
 git clone https://github.com/Nash0x7E2/awesome-flutter-snippets
+git clone https://github.com/raimondi/delimitmate
 #git clone https://github.com/huang12zheng/Dart-Data-Class-Generator
