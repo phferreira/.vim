@@ -12,3 +12,4 @@ git clone https://github.com/thosakwe/vim-flutter
 git clone https://github.com/carlobaldassi/vim-smartcomment
 git clone https://github.com/Nash0x7E2/awesome-flutter-snippets
 git clone https://github.com/jiangmiao/auto-pairs
+git clone https://github.com/Yggdroot/indentLine.git
