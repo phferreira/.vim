@@ -48,7 +48,7 @@ set laststatus=2
 "set foldmethod=indent
 
 " Line break at the end of screen
-" set nowrap " Without line break
+set nowrap " Without line break
 " set wrap   " With line break 
 
 " Buffers navigation
