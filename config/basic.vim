@@ -62,3 +62,20 @@ nmap <Space><Space> i<Space><ESC>
 nnoremap <C-j> i<CR><ESC>
 "wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/RobotoMono/Medium/complete/Roboto%20Mono%20Medium%20Nerd%20Font%20Complete%20Mono.ttf
 "set guifont=RobotoMono\ Nerd\ Font\ Mono:h16
+
+" Better tab
+vnoremap < <gv
+vnoremap > >gv
+
+" Disable arrow keys
+nnoremap <UP> <NOP>
+nnoremap <DOWN> <NOP>
+nnoremap <LEFT> <NOP>
+nnoremap <RIGHT> <NOP>
+
+" Change all ocurrency of current word
+nnoremap <leader>r :%s///g<LEFT><LEFT>
+nnoremap <leader>rc :%s///gc<LEFT><LEFT><LEFT>
+
+xnoremap <leader>r :s///g<LEFT><LEFT>
+xnoremap <leader>rc :s///gc<LEFT><LEFT><LEFT>
