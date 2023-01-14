@@ -8,3 +8,4 @@ source $HOME/.vim/config/git.vim
 source $HOME/.vim/config/nerdtree.vim
 source $HOME/.vim/config/vimspector.vim
 source $HOME/.vim/config/indent_line.vim
+source $HOME/.vim/config/sql_format.vim

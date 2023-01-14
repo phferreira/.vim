@@ -60,12 +60,20 @@ nnoremap <M-Left> :bp<cr>
 nmap <Space><Space> i<Space><ESC>
 
 nnoremap <C-j> i<CR><ESC>
+
+" Insert line
+nnoremap <C-k> O<ESC> 
+
 "wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/RobotoMono/Medium/complete/Roboto%20Mono%20Medium%20Nerd%20Font%20Complete%20Mono.ttf
 "set guifont=RobotoMono\ Nerd\ Font\ Mono:h16
 
 " Better tab
 vnoremap < <gv
 vnoremap > >gv
+
+" Keep selection on upper or down case
+vmap U Ugv
+vmap u ugv
 
 " Disable arrow keys
 nnoremap <UP> <NOP>
@@ -79,3 +87,9 @@ nnoremap <leader>rc :%s///gc<LEFT><LEFT><LEFT>
 
 xnoremap <leader>r :s///g<LEFT><LEFT>
 xnoremap <leader>rc :s///gc<LEFT><LEFT><LEFT>
+
+" Remap to only center the movementS
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n  nzzzv
+nnoremap N  Nzzzv
