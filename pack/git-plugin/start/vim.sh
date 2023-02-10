@@ -1,3 +1,4 @@
+git clone https://github.com/vim-airline/vim-airline
 git clone https://github.com/vim-airline/vim-airline-themes
 git clone https://github.com/tomasiser/vim-code-dark
 git clone https://github.com/neoclide/coc.nvim
