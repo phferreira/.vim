@@ -17,3 +17,4 @@ git clone https://github.com/Yggdroot/indentLine.git
 git clone https://github.com/jackc/sqlfmt
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/rust-lang/rust.vim.git
+git clone https://github.com/tpope/vim-obsession.git
