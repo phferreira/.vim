@@ -59,6 +59,12 @@ nnoremap <M-Right> :bn<cr>
 nnoremap <M-Left> :bp<cr>
 nmap <Space><Space> i<Space><ESC>
 
+" Tab navigation, use to compatibility with tmux
+nnoremap <C-M-Right> :tabnext<cr>
+nnoremap <C-M-Left> :tabprevious<cr>
+nnoremap <C-M-Up> :tabnew<cr>
+nnoremap <C-M-Down> :tabclose<cr>
+
 nnoremap <C-j> i<CR><ESC>
 
 " Insert line
@@ -93,3 +99,10 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap n  nzzzv
 nnoremap N  Nzzzv
+
+" Use to compatibility with tmux
+execute "silent! set <xUp>=\<Esc>[@;*A"
+execute "silent! set <xDown>=\<Esc>[@;*B"
+execute "silent! set <xRight>=\<Esc>[@;*C"
+execute "silent! set <xLeft>=\<Esc>[@;*D"
+
