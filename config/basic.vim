@@ -21,7 +21,12 @@ set splitbelow
 " Set terminal size
 set termwinsize=15x0 
 " can undo after quit a buffer
-set hidden
+"set hidden
+" set an undo file
+set undofile
+" set a directory to store the undo history
+set undodir=~/.vim/vimundo/
+
 
 " configure tabwidth and insert spaces instead of tabs
 set tabstop=2        " tab width is 2 spaces
