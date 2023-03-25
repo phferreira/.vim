@@ -58,4 +58,5 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-json',
   \ 'coc-rust-analyzer',
+  \ 'coc-pairs',
   \  ]
