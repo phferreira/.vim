@@ -1,3 +1,7 @@
+filetype plugin on
+filetype indent on
+filetype on
+
 " Enable to copy to clipboard with "+y
 " need install vim-gtk3
 set clipboard=unnamedplus
@@ -19,14 +23,22 @@ set smartindent
 " Open new buffers in botton
 set splitbelow
 " Set terminal size
-set termwinsize=15x0 
+set termwinsize=15x0
 " can undo after quit a buffer
 "set hidden
 " set an undo file
 set undofile
 " set a directory to store the undo history
 set undodir=~/.vim/vimundo/
-
+" set 10 lines before begin and end of view
+set scrolloff=10
+" create column for lint
+set signcolumn=yes
+" update
+set updatetime=100
+" no backup files
+set nobackup
+set nowritebackup
 
 " configure tabwidth and insert spaces instead of tabs
 set tabstop=2        " tab width is 2 spaces
@@ -60,7 +72,7 @@ set laststatus=2
 
 " Line break at the end of screen
 set nowrap " Without line break
-" set wrap   " With line break 
+" set wrap " With line break
 
 " Buffers navigation
 "nnoremap <c-x> :bp\|bd #<cr>
@@ -79,7 +91,7 @@ nnoremap <C-M-Down> :tabclose<cr>
 nnoremap <C-j> i<CR><ESC>
 
 " Insert line
-nnoremap <C-k> O<ESC> 
+nnoremap <C-k> O<ESC>
 
 "wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/RobotoMono/Medium/complete/Roboto%20Mono%20Medium%20Nerd%20Font%20Complete%20Mono.ttf
 "set guifont=RobotoMono\ Nerd\ Font\ Mono:h16
