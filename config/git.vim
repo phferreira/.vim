@@ -10,3 +10,6 @@ nmap <leader>gj :diffget //3<CR>
 "Add changes
 nmap <C-h> :diffput
 nmap <C-l> :diffget
+
+"Apply changes
+nmap <leader>gw :Gwrite<CR>

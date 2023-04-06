@@ -5,6 +5,7 @@ git clone https://github.com/neoclide/coc.nvim
 git clone https://github.com/dart-lang/dart-vim-plugin
 git clone https://github.com/junegunn/fzf
 git clone https://github.com/junegunn/fzf.vim
+# Need run sudo apt-get install ripgrep
 git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/preservim/nerdtree
 git clone https://github.com/ryanoasis/vim-devicons
