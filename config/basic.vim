@@ -39,6 +39,7 @@ set updatetime=100
 " no backup files
 set nobackup
 set nowritebackup
+set noswapfile
 
 " configure tabwidth and insert spaces instead of tabs
 set tabstop=2        " tab width is 2 spaces
