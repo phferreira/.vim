@@ -9,7 +9,7 @@ nmap <leader>gr :Git restore --staged %<CR>
 " Diff
 nmap <leader>gd :Gdiffsplit<CR>
 " Log 
-nmap <leader>gl :Git log<CR>
+nmap <leader>gl :Git log %<CR>
 " Blame
 nmap <leader>gb :Git Blame<CR>
 "nmap <leader>dv "Diff
@@ -35,3 +35,4 @@ nmap <leader>gu :Git pull<CR>
 
 " In Git view
 " ce => Append
+" cw => Append and rewrite message
