@@ -120,3 +120,11 @@ function! s:CopyMatches(bang, line1, line2, args, wholelines)
 endfunction
 command! -bang -nargs=? -range=% CopyMatches call s:CopyMatches(<bang>0, <line1>, <line2>, <q-args>, 0)
 command! -bang -nargs=? -range=% CopyLines call s:CopyMatches(<bang>0, <line1>, <line2>, <q-args>, 1)
+
+function! DoPrettyXML()
+  execute ':0'
+  execute ':%s/></>\r</g'
+  execute ':0'
+  execute ':normal gg=G'
+endfunction
+command! PrettyXML call DoPrettyXML()
