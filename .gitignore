@@ -1,0 +1,5 @@
+/pack/git-plugin/start/*/
+/session/
+/vimundo/
+/.netrwhist
+/coc-settings.json
