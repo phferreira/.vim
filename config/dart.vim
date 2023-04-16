@@ -16,3 +16,6 @@ nnoremap <leader>fq :FlutterQuit<cr>
 nnoremap <leader>fh :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
+nnoremap <leader>fa :call FlutterAnalyze()<cr>
+nnoremap <leader>ft :!flutter test<cr>
+

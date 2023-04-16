@@ -128,3 +128,11 @@ function! DoPrettyXML()
   execute ':normal gg=G'
 endfunction
 command! PrettyXML call DoPrettyXML()
+
+
+function! FlutterAnalyze()
+  execute ':new __Flutter_Analyze__'
+  execute ':r!flutter analyze'
+  execute ':setlocal buftype=nofile'
+  execute ':setlocal bufhidden=hide'
+endfunction
