@@ -3,7 +3,8 @@ nmap <leader>gs :G<CR>
 " Status
 nmap <leader>gS :G status<CR>
 " Checkout 
-nmap <leader>gC :Git checkout 
+"nmap <leader>gC :Git checkout 
+nmap <leader>gC :Gbranch <CR>
 " Commit  
 nmap <leader>gc :Git commit<CR>
 " Stage current file
@@ -34,6 +35,19 @@ nmap <leader>gw :Gwrite<CR>
 " Push  
 nmap <leader>gp :Git push<CR>
 
+" Delete branch remotly
+" git push origin --delete feature/branch
+
+" Delete branch local
+" git branch -d feature/branch
+" git branch -D feature/branch
+
+" Clean remote refs
+" Only check what is be clean
+" git remote prune origin --dry-run
+" Clean at all  
+" git remote prune origin 
+
 " Pull 
 "function! PushToCurrentBranch()
 "  let branch = trim(system('git branch --show-current'))
@@ -50,3 +64,15 @@ nmap <leader>gu :Gpull <CR>
 " In Git view
 " ce => Append
 " cw => Append and rewrite message
+"
+"
+
+function! s:changebranch(branch) 
+      execute 'Git checkout ' . trim(a:branch) . ' --recurse-submodules'
+         call feedkeys("i")
+endfunction
+
+command! -bang Gbranch call fzf#run({
+              \ 'source': 'git branch -a --no-color | grep -v "^\* " ', 
+              \ 'sink': function('s:changebranch')
+            \ })
