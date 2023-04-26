@@ -68,7 +68,11 @@ nmap <leader>gu :Gpull <CR>
 "
 
 function! s:changebranch(branch) 
-      execute 'Git checkout ' . trim(a:branch) . ' --recurse-submodules'
+      if stridx(trim(a:branch), 'origin') >= 0
+        execute 'Git checkout --track ' . trim(a:branch) . ' --recurse-submodules'
+      else
+        execute 'Git checkout ' . trim(a:branch) . ' --recurse-submodules'
+      endif
          call feedkeys("i")
 endfunction
 
