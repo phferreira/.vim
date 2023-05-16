@@ -1,4 +1,12 @@
-for DIR in /home/paulo/.vim/pack/git-plugin/start/*; 
+#!/usr/bin/env bash
+
+[[ $# -gt 1 ]] && echo 'Just have one args' && exit 1
+
+[[ $# -eq 1 ]] && diretory=$1 || diretory=/home/paulo/.vim/pack/git-plugin/start
+
+echo $diretory
+
+for DIR in $diretory/*
 do 
   if [ -d "$DIR" ]; then
     cd $DIR
