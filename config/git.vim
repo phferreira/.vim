@@ -57,6 +57,11 @@ let branch = trim(system('git branch --show-current'))
 command! -bar -nargs=* Gpull execute 'Git pull ' <q-args> ' origin ' .  branch . ' --recurse-submodules' 
 nmap <leader>gu :Gpull <CR>
 
+" Reset
+let branch = trim(system('git branch --show-current'))
+command! -bar -nargs=* GReset execute 'Git reset ' <q-args> ' origin/' .  branch . ' --hard --recurse-submodules' 
+nmap <leader>gR :GReset <CR>
+
 " Go to next change
 "[c
 "]c
