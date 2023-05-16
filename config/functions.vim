@@ -122,6 +122,7 @@ command! -bang -nargs=? -range=% CopyMatches call s:CopyMatches(<bang>0, <line1>
 command! -bang -nargs=? -range=% CopyLines call s:CopyMatches(<bang>0, <line1>, <line2>, <q-args>, 1)
 
 function! DoPrettyXML()
+  execute 'set ft=xml'
   execute ':0'
   execute ':%s/></>\r</g'
   execute ':0'
