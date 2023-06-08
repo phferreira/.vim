@@ -137,3 +137,10 @@ function! FlutterAnalyze()
   execute ':setlocal buftype=nofile'
   execute ':setlocal bufhidden=hide'
 endfunction
+
+function! FlutterTest()
+  execute ':new __Flutter_Test__'
+  execute ':r!flutter test --reporter expanded'
+  execute ':setlocal buftype=nofile'
+  execute ':setlocal bufhidden=hide'
+endfunction
