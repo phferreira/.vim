@@ -12,4 +12,5 @@ nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
 nnoremap <leader>fa :call FlutterAnalyze()<cr>
 nnoremap <leader>ft :call FlutterTest()<cr>
+nnoremap <leader>fta :call FlutterTestAll()<cr>
 

@@ -139,8 +139,17 @@ function! FlutterAnalyze()
 endfunction
 
 function! FlutterTest()
-  execute ':new __Flutter_Test__'
-  execute ':r!flutter test --reporter expanded'
+  let path = expand('%:p')
+  let file = expand('%:t')
+  execute ':new __Flutter_Test_'.file.'__'
+  execute ':r!flutter test --reporter expanded ' . path
+  setlocal buftype=nofile
+  setlocal bufhidden=hide
+endfunction
+
+function! FlutterTestAll()
+  execute ':new __Flutter_Test_All__'
+  execute ':r!flutter test --reporter expanded '
   execute ':setlocal buftype=nofile'
   execute ':setlocal bufhidden=hide'
 endfunction
