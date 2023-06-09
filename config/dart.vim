@@ -15,3 +15,5 @@ nnoremap <leader>ft :call FlutterTest()<cr>
 nnoremap <leader>fct :call FlutterCreateTest()<cr>
 nnoremap <leader>fta :call FlutterTestAll()<cr>
 
+"nmap <silent>[g <Plug>(coc-diagnostic-prev)
+"nmap <silent>]g <Plug>(coc-diagnostic-next)
