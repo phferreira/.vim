@@ -147,6 +147,23 @@ function! FlutterTest()
   setlocal bufhidden=hide
 endfunction
 
+function! FlutterCreateTest()
+  let filePath = expand('%:r')
+  let file = substitute(filePath, 'lib/', 'test/', '') . '_test.dart'
+
+  if !filereadable(file) 
+    execute ':new ' . file 
+    call append(line('^'), "import 'package:flutter_test/flutter_test.dart';");
+    call append(line('$'), "void main() {");
+    call append(line('$'), "  test('...', () {");
+    call append(line('$'), "    // TODO: Implement test");
+    call append(line('$'), "  });");
+    call append(line('$'), "}");
+  else
+    execute ':open '. file
+  endif
+endfunction
+
 function! FlutterTestAll()
   execute ':new __Flutter_Test_All__'
   execute ':r!flutter test --reporter expanded '
