@@ -43,13 +43,13 @@ xmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
 
 " Scroll popup menu 
-inoremap <silent><expr> <down>  coc#float#scroll(1) 
-inoremap <silent><expr>  <up>  coc#float#scroll(0)
+inoremap <silent><expr> <down>  coc#float#scroll(1, 1) 
+inoremap <silent><expr>  <up>  coc#float#scroll(0, 1)
 
 " nnoremap <nowait><expr> <down> coc#float#has_scroll() ? coc#float#scroll(1) : "\<esc>"
 " nnoremap <nowait><expr> <up> coc#float#has_scroll() ? coc#float#scroll(0) : "\<esc>"
-nnoremap <nowait><expr> <down>  coc#float#scroll(1)
-nnoremap <nowait><expr> <up>  coc#float#scroll(0) 
+nnoremap <nowait><expr> <down>  coc#float#scroll(1, 1)
+nnoremap <nowait><expr> <up>  coc#float#scroll(0, 1) 
 
 "coc config
 let g:coc_global_extensions = [
