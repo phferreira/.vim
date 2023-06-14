@@ -170,3 +170,11 @@ function! FlutterTestAll()
   execute ':setlocal buftype=nofile'
   execute ':setlocal bufhidden=hide'
 endfunction
+
+function! DoShuffle() range
+  let range = a:firstline . ',' . a:lastline
+  silent execute range . 's/^/\=rand() . " "'
+  silent execute range . 'sort n'
+  silent execute range . 's/\d\+ //g'
+endfunction
+command! -range=% Shuffle <line1>,<line2> call DoShuffle()
