@@ -5,7 +5,7 @@ let g:flutter_autoscroll=1
 let g:dartfmt_options = ['--fix', '--line-length 180']
 
 " Check fzf maps for conflicts
-nnoremap <leader>fr :FlutterRun<cr>
+nnoremap <leader>fr :call FlutterRun()<cr>
 nnoremap <leader>fq :FlutterQuit<cr>
 nnoremap <leader>fh :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>

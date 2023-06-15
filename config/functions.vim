@@ -1,4 +1,5 @@
-" Functions
+"----------------------------------------------------------------------------------------------------
+" FUNCTIONS
 
 "function! CopyMatches(reg)
 "  let hits = []
@@ -121,6 +122,9 @@ endfunction
 command! -bang -nargs=? -range=% CopyMatches call s:CopyMatches(<bang>0, <line1>, <line2>, <q-args>, 0)
 command! -bang -nargs=? -range=% CopyLines call s:CopyMatches(<bang>0, <line1>, <line2>, <q-args>, 1)
 
+"----------------------------------------------------------------------------------------------------
+" XML
+
 function! DoPrettyXML()
   execute 'set ft=xml'
   execute ':0'
@@ -130,19 +134,62 @@ function! DoPrettyXML()
 endfunction
 command! PrettyXML call DoPrettyXML()
 
+"----------------------------------------------------------------------------------------------------
+" FLUTTER
+
+function! FlutterRun()
+  let flutterRun = 'FlutterRun '  
+  
+  if filereadable('./keys.json') 
+    execute flutterRun . ' --dart-define-from-file=./keys.json'
+  else
+    execute flutterRun
+  endif
+endfunction
 
 function! FlutterAnalyze()
-  execute ':new __Flutter_Analyze__'
+  let file = '__Flutter_Analyze__'
+
+  if (buflisted(file) == 0)
+    execute ':new ' . file
+  else
+    execute 'buffer ' . file
+    execute ':%d'
+  endif
+
   execute ':r!flutter analyze'
-  execute ':setlocal buftype=nofile'
-  execute ':setlocal bufhidden=hide'
+  setlocal buftype=nofile
+  setlocal bufhidden=hide
+endfunction
+
+function! FlutterTestAll()
+  let file = '__Flutter_Test_All__'
+
+  if (buflisted(file) == 0)
+    execute ':new ' . file
+  else
+    execute 'buffer ' . file
+    execute ':%d'
+  endif
+
+  execute ':r!flutter test -j 10 --reporter expanded '
+  setlocal buftype=nofile
+  setlocal bufhidden=hide
 endfunction
 
 function! FlutterTest()
   let path = expand('%:p')
-  let file = expand('%:t')
-  execute ':new __Flutter_Test_'.file.'__'
-  execute ':r!flutter test --reporter expanded ' . path
+  let file = '__Flutter_Test_' . expand('%:t') . '__'
+  let flutterTest = ':r!flutter test -j 10 --reporter expanded '  
+
+  if (buflisted(file) == 0)
+    execute ':new ' . file
+  else
+    execute 'buffer ' . file
+    execute ':%d'
+  endif
+
+  execute flutterTest . path
   setlocal buftype=nofile
   setlocal bufhidden=hide
 endfunction
@@ -160,15 +207,8 @@ function! FlutterCreateTest()
     call append(line('$'), "  });");
     call append(line('$'), "}");
   else
-    execute ':open '. file
+    execute ':open ' . file
   endif
-endfunction
-
-function! FlutterTestAll()
-  execute ':new __Flutter_Test_All__'
-  execute ':r!flutter test --reporter expanded '
-  execute ':setlocal buftype=nofile'
-  execute ':setlocal bufhidden=hide'
 endfunction
 
 function! DoShuffle() range
