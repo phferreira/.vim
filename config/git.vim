@@ -19,7 +19,7 @@ nmap <leader>gl :Git log %<CR>
 " List remote branchs 
 nmap <leader>gB :Git branch -a<CR>
 " Blame current file
-nmap <leader>gb :Git Blame %<CR>
+nmap <leader>gb :Git blame %<CR>
 
 "conflict resolve left side
 nmap <leader>gf :diffget //2<CR>
