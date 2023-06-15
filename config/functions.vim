@@ -1,16 +1,8 @@
 " Functions
 
-"function! CopyMatches(reg)
-"  let hits = []
-"  %s//\=len(add(hits, submatch(0))) ? submatch(0) : ''/gne
-"  let reg = empty(a:reg) ? '+' : a:reg
-"  execute 'let @'.reg.' = join(hits, "\n") . "\n"'
-"endfunction
-"command! -register CopyMatches call CopyMatches(<q-reg>)
-
 " Plugin to copy matches (search hits which may be multiline).
 " Version 2012-05-03 from http://vim.wikia.com/wiki/VimTip478
-"
+
 " :CopyMatches      copy matches to clipboard (each match has newline added)
 " :CopyMatches x    copy matches to register x
 " :CopyMatches X    append matches to register x
