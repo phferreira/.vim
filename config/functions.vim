@@ -210,3 +210,38 @@ function! DoShuffle() range
   silent execute range . 's/\d\+ //g'
 endfunction
 command! -range=% Shuffle <line1>,<line2> call DoShuffle()
+
+function! CreateVimspector()
+  let file = './.vimspector.json'
+
+  if !filereadable(file) 
+    let fileText = []
+    call add(fileText, '{                                                                                ')
+    call add(fileText, '  "configurations": {                                                            ')
+    call add(fileText, '    "Launch": {                                                                  ')
+    call add(fileText, '      "adapter": "dart-code",                                                    ')
+    call add(fileText, '        "breakpoints": {                                                         ')
+    call add(fileText, '          "exception": {                                                         ')
+    call add(fileText, '            "All": "N",                                                          ')
+    call add(fileText, '            "Unhandled": "N"                                                     ')
+    call add(fileText, '          }                                                                      ')
+    call add(fileText, '        },                                                                       ')
+    call add(fileText, '      "configuration": {                                                         ')
+    call add(fileText, '       "request": "launch",                                                      ')
+    call add(fileText, '       "type": "flutter",                                                        ')
+    call add(fileText, '       "dartSdkPath": "/home/paulo/.development/flutter/bin/cache/dart-sdk/bin", ')
+    call add(fileText, '       "flutterSdkPath": "/home/paulo/.development/flutter/",                    ')
+    call add(fileText, '       "program": "${workspaceRoot}/lib/main.dart",                              ')
+    call add(fileText, '       "cwd": "${workspaceRoot}",                                                ')
+    call add(fileText, '       "args": [                                                                 ')
+    call add(fileText, '         "-d", "linux",                                                          ')
+    call add(fileText, '         "--dart-define-from-file","./keys.json"                                 ')
+    call add(fileText, '       ]                                                                         ')
+    call add(fileText, '      }                                                                          ')
+    call add(fileText, '    }                                                                            ')
+    call add(fileText, '  }                                                                              ')
+    call add(fileText, '}                                                                                ')
+    call writefile(fileText, file)
+  endif
+  call vimspector#Launch()
+endfunction
