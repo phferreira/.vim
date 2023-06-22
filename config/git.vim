@@ -73,12 +73,17 @@ nmap <leader>gR :GReset <CR>
 "
 
 function! s:changebranch(branch) 
-      if stridx(trim(a:branch), 'origin') >= 0
-        execute 'Git checkout --track ' . trim(a:branch) . ' --recurse-submodules'
-      else
-        execute 'Git checkout ' . trim(a:branch) . ' --recurse-submodules'
-      endif
-         call feedkeys("i")
+  if stridx(trim(a:branch), 'origin') >= 0
+    execute 'Git checkout --track ' . trim(a:branch) . ' --recurse-submodules'
+
+  else
+    execute 'Git checkout ' . trim(a:branch) . ' --recurse-submodules'
+  endif
+
+  if !filereadable(file) 
+    
+  endif
+  call feedkeys("i")
 endfunction
 
 command! -bang Gbranch call fzf#run({
