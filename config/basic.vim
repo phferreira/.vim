@@ -131,3 +131,10 @@ execute "silent! set <xDown>=\<Esc>[@;*B"
 execute "silent! set <xRight>=\<Esc>[@;*C"
 execute "silent! set <xLeft>=\<Esc>[@;*D"
 
+" Vimgrep mapping
+nnoremap [q :cprev<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
+nnoremap [<C-Q> :cpfile<CR>
+nnoremap ]<C-Q> :cnfile<CR>
