@@ -19,5 +19,6 @@ git clone https://github.com/jackc/sqlfmt
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/rust-lang/rust.vim.git
 git clone https://github.com/tpope/vim-obsession.git
+git clone https://github.com/dhruvasagar/vim-prosession.git
 git clone https://github.com/tiagofumo/vim-nerdtree-syntax-highlight.git
 git clone https://github.com/honza/vim-snippets.git
