@@ -213,6 +213,11 @@ command! -range=% Shuffle <line1>,<line2> call DoShuffle()
 
 function! CreateVimspector()
   let file = './.vimspector.json'
+  let keyFile = './.keys.json'
+
+  if !filereadable(keyFile) 
+    call writefile([], keyFile)
+  endif
 
   if !filereadable(file) 
     let fileText = []
